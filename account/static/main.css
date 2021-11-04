@@ -1,0 +1,92 @@
+    form{
+        text-align: center;
+    }
+    input[type=text], [type=email], [type=password],select {
+        width: 50%;
+        padding: 12px 20px;
+        display: block;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+
+button {
+  background-color: #031456;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+
+}
+h1{
+  text-transform: uppercase;
+  color: #ff6200;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+    .dropbtn {
+        background-color: #ff6200;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: #ff6200;
+    }
+
+
+    .navbar {
+        background-color: darkblue;
+    }
+
+    .nav_ul {
+        display: flex;
+        list-style-type: none;
+
+    }
+
+    .nav_ul li {
+        margin: 10px;
+    }
+    .nav_ul li>a{
+        text-decoration: none;
+        color: white;
+    }

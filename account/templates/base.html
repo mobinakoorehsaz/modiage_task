@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}"></head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+
+</style>
+<body>
+<div class=" navbar">
+
+    <div class="dropdown">
+        {% if user.is_authenticated %}
+            <button class="dropbtn">{{ user.username }}</button>
+            <div class="dropdown-content">
+                <a href="{% url 'account:logout_url' %}">logout</a>
+                {% if user.is_superuser or user.is_admin %}
+                    <a href="{% url 'account:permission_url' %}">permissions</a>
+                {% endif %}
+                {% else %}
+                <ul class="nav_ul">
+                    <li><a href="{% url 'account:signup_url' %}">sing up</a></li>
+                    /
+                    <li><a href="{% url 'account:login_url' %}">sing in</a></li>
+                </ul>
+            </div>
+            </div>
+        {% endif %}
+    </div>
+    </ul>
+</div>
+
+
+</div>
+</div>
+{% block main %}
+{% endblock %}
+</body>
+</html>

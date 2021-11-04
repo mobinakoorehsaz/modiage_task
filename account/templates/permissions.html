@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>permissions</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}"></head>
+
+</head>
+<body>
+{% block main %}
+    <h1>admin panel</h1>
+    <a href="{% url 'account:main_url' %}">main page</a>
+    {% if user.is_superuser %}
+        <form method="post" action="{% url 'account:change_perm' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit"> put</button>
+        </form>
+    {% else %}
+        <h1>you have note permission</h1>
+    {% endif %}
+{% endblock %}
+</body>
+</html>
